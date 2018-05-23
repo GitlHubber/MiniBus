@@ -6,9 +6,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->spinBox->setMinimum(1);
+    ui->spinBox->setMaximum(10);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::on_enterButton_clicked()
+{
+    size = ui->spinBox->value();
+    qDebug() << size;
+
+
+    MF = new MatrixForm();
+    MF->show();
+    this->close();
+
+    MF->start(size);
 }

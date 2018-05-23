@@ -25,10 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    matrixform.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    matrixform.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    matrixform.ui
